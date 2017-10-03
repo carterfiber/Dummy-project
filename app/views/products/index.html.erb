@@ -1,0 +1,114 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Products</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Watermark</th>
+      <th>Sku</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.title %></td>
+        <td><%= product.description %></td>
+        <td><%= product.category_id %></td>
+        <td><%= product.watermark %></td>
+        <td><%= product.sku %></td>
+        <td><%= product.status %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>
+
+
+
+<div class="zoomwall" id="gallery">
+  <div class="">
+    <div class="">
+    <hr>
+      <div class="gal" id="sortable">
+        <!-- <img src="css/assets/imgs/img_2332.jpg" alt="">
+        <img src="css/assets/imgs/diversityphotos-p49-19.jpg" alt="">
+        <img src="css/assets/imgs/img_1912 copy.jpg" alt="">
+        <img src="css/assets/imgs/diversityphotos-p49-2312.jpg" alt="">
+        <img src="css/assets/imgs/img_2165.jpg" alt="">
+        <img src="css/assets/imgs/diversityphotos-p49-3214.jpg" alt="">
+        <img src="css/assets/imgs/img_0910 copy.jpg" alt="">  
+        <img src="css/assets/imgs/diversityphotos-p49-3547.jpg" alt="">
+        <img src="css/assets/imgs/delano_kenneth_lifestyle (22).jpg" alt="">
+        <img src="css/assets/imgs/img_0927.jpg" alt="">
+        <img src="css/assets/imgs/img_4326.jpg" alt="">
+        <img src="css/assets/imgs/diversityphotos-p49-3550.jpg" alt="">
+        <img src="css/assets/imgs/img_1167 copy.jpg" alt="">
+        <img src="css/assets/imgs/diversityphotos-p49-3643.jpg" alt="">
+        <img src="css/assets/imgs/anita_business_lifestyle (33).jpg" alt="">
+        <img src="css/assets/imgs/anita_business_lifestyle-12.jpg" alt="">
+        <img src="css/assets/imgs/diversityphotos-p49-3644.jpg" alt="">
+        <img src="css/assets/imgs/delano_kenneth_lifestyle (17).jpg" alt="">
+        <img src="css/assets/imgs/diversityphotos-p49-3653.jpg" alt="">
+        <img src="css/assets/imgs/img_1688.jpg" alt="">
+        <img src="css/assets/imgs/diversityphotos-p49-3717.jpg" alt="">
+        
+        <img src="css/assets/imgs/diversityphotos-p49-3724.jpg" alt="">
+        
+        <img src="css/assets/imgs/diversityphotos-p49-3725.jpg" alt="">
+        <img src="css/assets/imgs/anita_business_lifestyle-36.jpg" alt="">
+        <img src="css/assets/imgs/diversityphotos-p49-3759.jpg" alt="">
+        
+        <img src="css/assets/imgs/img_5287.jpg" alt="">
+        <img src="css/assets/imgs/anita_piedmont_park (12).jpg" alt="">
+        <img src="css/assets/imgs/img_7020.jpg" alt="">
+        <img src="css/assets/imgs/delano_kenneth_lifestyle (10).jpg" alt="">
+        <img src="css/assets/imgs/img_7855.jpg" alt="">
+        
+        <img src="css/assets/imgs/img_8113.jpg" alt=""> -->
+
+        <img src="https://cdn-images-1.medium.com/max/1318/1*F1PyNzN3hy5Gh_Bp3c0c3Q.png" alt="">
+        
+        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
+        
+        <img src="http://www.dreams.metroeve.com/wp-content/uploads/2017/03/dreams.metroeve_black-people-dreams-meaning.jpg" alt="">
+
+        <img src="https://images.rapgenius.com/7c2182a6de4585861413c4035f7caad7.1000x1000x1.jpg" alt="">
+        
+        <img src="https://i.pinimg.com/736x/bf/a1/9b/bfa19b9893324be8332151cb28c6d304--short-natural-curly-hairstyles-natural-hair.jpg" alt="">
+        
+        <img src="http://www.blackhairstyletrends.com/wp-content/uploads/2014/03/black-people-hairstyles.jpg" alt="">
+        
+        <img src="http://www.diversityinc.com/wp-content/uploads/2013/10/NaturalHair310.jpg" alt="">
+        
+        <img src="https://cdn-images-1.medium.com/max/1318/1*F1PyNzN3hy5Gh_Bp3c0c3Q.png" alt="">
+        
+        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
+        
+        <img src="http://www.dreams.metroeve.com/wp-content/uploads/2017/03/dreams.metroeve_black-people-dreams-meaning.jpg" alt="">
+
+        <img src="https://images.rapgenius.com/7c2182a6de4585861413c4035f7caad7.1000x1000x1.jpg" alt="">
+        
+        <img src="https://i.pinimg.com/736x/bf/a1/9b/bfa19b9893324be8332151cb28c6d304--short-natural-curly-hairstyles-natural-hair.jpg" alt="">
+        
+        <img src="http://www.blackhairstyletrends.com/wp-content/uploads/2014/03/black-people-hairstyles.jpg" alt="">
+        
+        <img src="http://www.diversityinc.com/wp-content/uploads/2013/10/NaturalHair310.jpg" alt="">
+            
+      </div>
+      
+    </div>
+  </div>
+</div>
